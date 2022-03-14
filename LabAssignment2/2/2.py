@@ -34,20 +34,22 @@ def main():
     if not glfw.init():
         return
     
-    print('enter key')
-    global key
-    key = int(input())
-    
     window = glfw.create_window(480, 480, "2020056353", None, None)
     if not window:
         glfw.terminate()
         return
     glfw.make_context_current(window)
 
+    global key
+    key = 4
     while not glfw.window_should_close(window):
-        glfw.poll_events()
-        render()
-        glfw.swap_buffers(window)
+        try:
+            glfw.poll_events()
+            render()
+            glfw.swap_buffers(window)
+            key = int(input())
+        except EOFError:
+            break
     glfw.terminate()
 
 if __name__ == "__main__":
