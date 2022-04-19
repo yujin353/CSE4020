@@ -24,7 +24,7 @@ def render():
 
     global projection
     if projection:
-        gluPerspective(45, 1, 1, 10)
+        gluPerspective(45, 1, 1, 50)
     else:
         glOrtho(-5,5, -5,5, -15,15)
 
