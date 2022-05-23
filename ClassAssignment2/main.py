@@ -309,7 +309,7 @@ def createHierarchicalModelObject():
 
     i_path = os.path.join(os.getcwd(), './island.obj')
     l_path = os.path.join(os.getcwd(), './Lowpoly_tree_sample.obj')
-    s_path = os.path.join(os.getcwd(), './Sting_Sword_lowpoly.obj')
+    s_path = os.path.join(os.getcwd(), './Sting_sword.obj')
     
     newVertexArrayIndexed,newIndexArray,newNormal,newNormal2 = createVertexAndIndexArrayIndexed(i_path)#'./island.obj')
     newVertexArrayIndexed2,newIndexArray2,newNormal2,newNormal22 = createVertexAndIndexArrayIndexed(l_path)#'./Lowpoly_tree_sample.obj')
