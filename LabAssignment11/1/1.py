@@ -38,7 +38,7 @@ def render():
     glBegin(GL_LINE_STRIP)
     
     for t in np.arange(0,1,.01):
-        p = ((1-t)**3)*p0 + (3*t*((1-t)**2))*p1 + (3*(t**2)*(1-t))*p2 + (t**3)*p3
+        p = ((1-t)*(1-t)*(1-t))*p0 + (3*t*((1-t)*(1-t)))*p1 + (3*(t*t)*(1-t))*p2 + (t*t*t)*p3
         #p = draw_curve(t, point_list)
         glVertex2fv(p)
         
